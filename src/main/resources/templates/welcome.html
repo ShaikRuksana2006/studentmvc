@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Student</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 520px;
+            margin: 60px auto;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome, <span th:text="${student.name}">Student</span>!</h2>
+    <p><strong>Roll Number:</strong> <span th:text="${student.rollNumber}"></span></p>
+    <p><strong>Department:</strong> <span th:text="${student.department}"></span></p>
+    <a th:href="@{/}">Register Another Student</a>
+</body>
+</html>
